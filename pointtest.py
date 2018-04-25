@@ -1,11 +1,13 @@
 # pylint: disable=missing-docstring, invalid-name
-"""Show functionality of the methods to determine 
-if points lie in the polygon for downtown."""
+"""Show functionality of the methods to determine
+if points lie in the polygon."""
+
+import datetime as dt
+import time
 
 import pandas as pd
-from shapely.geometry.polygon import Polygon
 import shapely.wkt
-import datetime as dt
+from shapely.geometry.polygon import Polygon
 
 DATATYPES = {
     "Taxi ID": object, "Trip Start Timestamp": object, "Pickup Centroid Location": object

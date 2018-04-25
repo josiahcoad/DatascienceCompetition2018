@@ -1,14 +1,15 @@
-# pylint: disable=missing-docstring, invalid-name
-"""Newest version. Get indicator proportions for iAirToSub and iNotAirToSub."""
+# pylint: disable=missing-docstring
+"""Get proportions of trips from Airport To Suburb and
+Not Airpot To Suburbs."""
 
 import datetime as dt
 import time
 from multiprocessing import Pool
+
 import numpy as np
 import pandas as pd
 import shapely.wkt
 from shapely.geometry.polygon import Polygon
-
 
 DATATYPES = {
     "Taxi ID": object, "Trip Start Timestamp": object,
@@ -122,6 +123,4 @@ def readWrite(year):
 
 
 if __name__ == "__main__":
-    # for i in range(2013, 2018):
-    #     readWrite(i)
     readWrite(2017)

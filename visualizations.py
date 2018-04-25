@@ -1,8 +1,10 @@
+# pylint: disable=missing-docstring
 import datetime as dt
-import time
 from multiprocessing import Pool
+
 import numpy as np
 import pandas as pd
+
 
 def parallelize_dataframe(df, func):
     num_partitions = 100

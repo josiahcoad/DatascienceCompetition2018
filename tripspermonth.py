@@ -1,15 +1,18 @@
-# pylint: disable=missing-docstring, invalid-name
-"""Get number of trips per month."""
+# pylint: disable=missing-docstring
+"""Read each file of original data and get
+the number of taxis operating in each month."""
 
 import pandas as pd
 
 DATATYPES = {"Trip Start Timestamp": object}
 
 def readWrite(startyear):
-    folder = "original"
+    """Read each file of original data and get 
+    the number of taxis operating in each month."""
+    datafolder = "original"
     allyears = pd.DataFrame()
     for year in range(startyear, 2018):
-        filename = f"{folder}/Chicago_taxi_trips{year}.csv"
+        filename = f"{datafolder}/Chicago_taxi_trips{year}.csv"
         df = pd.read_csv(filename,
                             usecols=DATATYPES.keys(),
                             dtype=DATATYPES)

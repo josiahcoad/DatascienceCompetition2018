@@ -1,6 +1,7 @@
 # pylint: disable=missing-docstring, invalid-name
-"""Get weekly/daily/hourly sums per taxi and medians across all taxis
-of things like trip totals and trip seconds."""
+"""Get weekly/daily/hourly sums per taxi and
+medians across all taxis in that time block
+for things like trip totals and trip seconds."""
 
 import datetime as dt
 import time
@@ -112,8 +113,7 @@ def readWrite(year):
 
 
 if __name__ == "__main__":
-    t0 = time.time()
-    for year in range(2013, 2018):
-        readWrite(year)
-    # readWrite(2017)
-    print(f"All done after {round((time.time()-t0)/60)} min.")
+    T0 = time.time()
+    for y in range(2013, 2018):
+        readWrite(y)
+    print(f"All done after {round((time.time()-T0)/60)} min.")
